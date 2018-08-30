@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+2018-07-04
+  - Updated filter controls with aria attributes.
+  - Add "City map" paragraph in map container so that it is read by screen reader
+  - Include index.js script for loading service worker
+
+2018-06-15
+  - Add labels for filter controls, but put them off screen.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#333333">
+
+  <base href="/">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="modulepreload" href="app/app.js">
+
+  <title>DIY Single Page Web App</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/")><h1>DIY Single Page Web App</h1></a>
+    </nav>
+  </header>
+
+  <main>
+    <img class="loading" alt="loading" src="img/loading.svg">
+  </main>
+
+  <footer>
+    <p>Copyright (c) 2018 <a href="/"><strong>DIY Single Page Web App</strong></a> All Rights Reserved.</p>
+  </footer>
+
+  <script type="module" src="app/app.js"></script>
+
+</body>
+
+</html>

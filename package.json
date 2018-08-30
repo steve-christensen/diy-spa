@@ -1,0 +1,21 @@
+{
+  "name": "spwa",
+  "version": "1.0.0",
+  "description": "Single page web app template",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "single",
+    "page",
+    "web",
+    "app"
+  ],
+  "author": "Steve Christensen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
