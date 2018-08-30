@@ -10,10 +10,14 @@ Though the router can use regular expressions for route matching, it does not pu
 
 ## Installation and Running
 
-After cloning the project, start the server with the command:
+
+
+After cloning and installing the project, start the server with either of the following commands:
 
 ```
-node server
+$ npm start
+
+$ node server
 ```
 
 ## Router Usage

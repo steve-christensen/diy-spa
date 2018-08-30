@@ -1,7 +1,7 @@
 {
-  "name": "spwa",
+  "name": "diy-spa",
   "version": "1.0.0",
-  "description": "Single page web app template",
+  "description": "Single page app template",
   "main": "index.html",
   "scripts": {
     "start": "node server",

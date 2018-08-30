@@ -72,7 +72,7 @@ export class Router {
     }
 
     // Check the route against the routes array.
-    let route = this.findRoute(newpath);
+    let route = this.findRoute(newPath);
     if (route) {
       // Render the appropriate view
       route.view.renderView();

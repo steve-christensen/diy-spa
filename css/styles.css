@@ -47,7 +47,6 @@ main {
   height: calc(100vh - 7em);
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
 }
 
 .loading {
@@ -64,7 +63,6 @@ section {
   height: 100%;
   width: 100%;
   overflow-x: scroll;
-  overflow-y: hidden;
 }
 
 .list ul {
@@ -75,14 +73,19 @@ section {
 }
 
 .list li {
-  width: 120px;
+  width: 140px;
   margin: 1em;
+  padding: 1em;
   background-color: #333;
   color: #fdfdfd;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
+}
+
+.list li p {
+  width: 100%;
 }
 
 .error img {
