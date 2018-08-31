@@ -24,6 +24,7 @@ export class Detail {
       section.insertAdjacentHTML('afterbegin',`<h2>${fruit.name}</h2>`);
       section.insertAdjacentHTML('beforeend',`<p>Color: ${fruit.color}</p>`)
       section.insertAdjacentHTML('beforeend',`<p>Count: ${fruit.count}</p>`)
+      section.insertAdjacentHTML('beforeend',`<p><a href="https://www.google.com/search?q=${fruit.name}">Search for ${fruit.name}</a></p>`)
     }
     else {
       section.insertAdjacentHTML('afterbegin', '<h2>Invalid URL</h2>');
