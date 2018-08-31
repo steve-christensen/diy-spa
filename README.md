@@ -8,17 +8,34 @@ Limitations: Since I am not using hash for the internal links, deep linking from
 
 Though the router can use regular expressions for route matching, it does not pull parameters or arguments out of the path. The renderView code inside the view object must handle any necessary parsing of location.pathname.
 
+## Example:
+
+The example creates a very simple fruit app and has a list view for the root URL and a detail view with paths such as '/fruit/apple'. Perhaps I could have been more imaginative, but it satisfies me that the router will meet the needs of my use case.
+
 ## Installation and Running
 
+1. Clone the repository:
 
+  ```
+  git clone https://github.com/steve-christensen/diy-spa.git
+  ```
 
-After cloning and installing the project, start the server with either of the following commands:
+2. Install dependencies:
 
-```
-$ npm start
+  ```
+  npm install
+  ```
 
-$ node server
-```
+3. Start the server:
+
+  ```
+  npm start
+  ```
+  or
+
+  ```
+  node server
+  ```
 
 ## Router Usage
 
@@ -32,7 +49,7 @@ import { Router } from './router.js';
 import { List } from './list/list.js';
 import { Detail } from './detail/detail.js';
 
-// ServeFile is a special view that reads the HTML to be rendered from a static
+// ServeFile is a special view that the HTML to be rendered from a static
 // file. In this example, I use it for rendering the error page.
 import { ServeFile } from './serve-file.js';
 
