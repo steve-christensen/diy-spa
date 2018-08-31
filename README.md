@@ -1,16 +1,16 @@
 # SPWA (Single Page Web App)
 
-This project is basically a proof of concept for a very lightweight JavaScript router that I am to use in my Udacity Mobile Web Specialist course project. I've built a simple fruit app around the router (/app/router/router.js) to simulate my use case, but I'm primarily testing router.js.
+This project is basically a proof of concept for a very lightweight JavaScript router that I am to use in my Udacity Mobile Web Specialist course project. For my class work, I needed to create my own router without using jQuery or any framework. I've built a simple fruit app around the router (/app/router.js) to simulate my use case.
 
 The router (/app/router.js) only concerns itself with URL pathname -- ignoring search and hash.
 
-Limitations: Since I am not using hash for the internal links, deep linking from external sites or entering internal URLs directly in the browser's address bar is not handled. You can handle that case by configuring your server to direct internal paths through index.html. Then, the JavaScript router will take over and render the proper view.
+Limitations: Since I am not using hash for the internal links, deep linking from external sites or entering internal URLs directly in the browser's address bar is not handled by this router. You can handle that case by configuring your server to direct internal paths through index.html. Then, the JavaScript router will take over and render the proper view. In this project, I have a simple ExpressJS server that serves this purpose.
 
-Though the router can use regular expressions for route matching, it does not pull parameters or arguments out of the path. The renderView code inside the view object must handle any necessary parsing of location.pathname.
+Though the router can use regular expressions for route matching, it does not pull parameters or arguments out of the path. The renderView code inside the view object must handle any necessary parsing of location.pathname to pull parameters. You'll find an example of that in detail.js.
 
 ## Example:
 
-The example creates a very simple fruit app and has a list view for the root URL and a detail view with paths such as '/fruit/apple'. Perhaps I could have been more imaginative, but it satisfies me that the router will meet the needs of my use case.
+The example creates a very simple fruit app and has a list view for the root URL and a detail view with paths such as '/fruit/apple'.
 
 ## Installation and Running
 
@@ -57,7 +57,7 @@ import { ServeFile } from './serve-file.js';
 const list = new List();
 const detail = new Detail();
 
-// Initialize the router passing an instance of ServeFile.
+// Initialize the router passing an instance of ServeFile to act as the error view.
 const router = new Router(new ServeFile('/page404.html'));
 
 // Add the routes:
@@ -70,3 +70,7 @@ router.addRoute(/^\/fruit\/[^\/#?]*$/, detail);
 // Call the render function directly to render the first view
 router.render(location);
 ```
+
+## Acknowledgements
+
+I read several articles and looked at various examples before I started coding. Though I did not keep track of those sources, I very much appreciate that they shared their knowledge.
